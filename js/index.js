@@ -41,6 +41,8 @@ const siteContent = {
 const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+
+
 const navi = document.querySelectorAll('header nav a');
 navi[0].textContent = siteContent['nav']['nav-item-1'];
 navi[1].textContent = siteContent['nav']['nav-item-2'];
@@ -48,6 +50,17 @@ navi[2].textContent = siteContent['nav']['nav-item-3'];
 navi[3].textContent = siteContent['nav']['nav-item-4'];
 navi[4].textContent = siteContent['nav']['nav-item-5'];
 navi[5].textContent = siteContent['nav']['nav-item-6'];
+navi.forEach( function(currentValue){
+  currentValue.style.color = 'green';
+});
+
+const nav = document.querySelector('nav');
+const go = document.createElement('a');
+go.textContent = ('Go');
+nav.prepend(go);
+const comeBack = document.createElement('a');
+comeBack.textContent = ('Come Back');
+nav.appendChild(comeBack);
 
 const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', 'img/header-img.png');
