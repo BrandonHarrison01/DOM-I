@@ -73,6 +73,10 @@ titleHead.textContent = siteContent["cta"]["h1"];
 
 const titleButton = document.querySelector(".cta-text button");
 titleButton.textContent = siteContent['cta']['button'];
+titleButton.addEventListener("click", function(){
+  titleHead.toggleAttribute(titleHead.style.color = 'red');
+});
+
 
 const topContentHead = document.querySelectorAll(".top-content .text-content h4");
 topContentHead[0].textContent = siteContent['main-content']['features-h4'];
